@@ -8,6 +8,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./ui/tooltip"
 import { InfoIcon } from 'lucide-react'
 
+import ExchangeRates from './ExchangeRates';
+
+
 const LoanCalculator = () => {
     const [loanAmount, setLoanAmount] = useState(100000);
     const [annualInterestRate, setAnnualInterestRate] = useState(3);
@@ -25,6 +28,7 @@ const LoanCalculator = () => {
     return (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-purple-100 p-4">
             <Card className="w-full max-w-md">
+            <ExchangeRates />
                 <CardHeader>
                     <CardTitle className="text-2xl font-bold text-center text-gray-800">Loan Calculator</CardTitle>
                 </CardHeader>
